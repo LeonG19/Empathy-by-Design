@@ -30,20 +30,17 @@ source_code/
 │   ├── dpo_LLM.py              # Fine-tuning script using TRL DPOTrainer
 │   ├── sft_LLM.py              # Optional SFT baseline training script
 │
-├── eval/
-│   ├── metrics.py              # Embedding, factual, and human-centric metrics
-│   ├── geval_factual.py        # GEval factual correctness metric
-│   ├── geval_empathy.py        # GEval empathy metric
-│
 ├── indexing/
 │   ├── create_index.py         # Builds FAISS or Milvus index for RAG pipeline
 │   ├── embed_docs.py           # Embedding creation for documents
 │
-├── configs/
-│   ├── eval_config.yaml        # Evaluation settings
-│   ├── train_config.yaml       # DPO training parameters
+├── llm/
+│   ├── llm_base.py        # Class to manage llm deployment and generation
+│   ├── init.py     
 │
 └── main.py                     # Main evaluation entry point
+└── config.py                   # Class to manage project configurations
+└── metrics.py
 ```
 
 ## Fine-Tuning (DPO Alignment)
