@@ -1,0 +1,32 @@
+# Config / utils
+yacs
+tqdm
+
+# LLMs
+transformers>=4.44.0
+accelerate
+torch            # or install cuda-specific torch as needed
+
+# OpenAI (optional; only if you use --llm openai)
+openai>=1.40.0
+
+# Retrieval / Reranking
+faiss-cpu             # if you use --retriever faiss
+pyserini              # often useful alongside bm25
+# Rankify (git install) -> choose the extras you need:
+# pip install "rankify @ git+https://github.com/DataScienceUIBK/Rankify.git#egg=rankify"
+
+rankify
+
+# Metrics
+rouge-score
+sacrebleu
+bert-score
+
+# DPO fine-tune
+datasets
+trl
+peft
+bitsandbytes        # optional for 8-bit/4-bit
+sentence-transformers
+openai>=1.40.0
